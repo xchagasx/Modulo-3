@@ -8,4 +8,3 @@ Basta clonar o repositório
 
 ```sh
 git clone git@github.com:tryber/sd-022a-live-lectures.git
-```
