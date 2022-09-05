@@ -7,13 +7,13 @@ Essa API é usada como exemplo didático para o bloco de Arquitetura de Software
 <details>
   <summary>Branchs no repositório</summary>
 
-  -  `complex-application` - ínicio do bloco
-  - `simple-application-model-course` - conteúdo do dia de model completo
-  - `simple-application-model-live-lectures` - aula ao vivo do dia de model completo
-  - `simple-application-service-course` - conteúdo do dia de service completo
-  - `simple-application-service-live-lectures` - aula ao vivo do dia de service completo
-  - `simple-application-controller-course` - conteúdo do dia de controller completo
-  - `simple-application-controller-live-lectures` - aula ao vivo do dia de controller completo
+  1.  `complex-application` - início do bloco
+  2. `simple-application-model-course` - conteúdo do dia de model completo
+  3. `simple-application-model-live-lectures` - aula ao vivo do dia de model completo
+  4. `simple-application-service-course` - conteúdo do dia de service completo
+  5. `simple-application-service-live-lectures` - aula ao vivo do dia de service completo
+  6. `simple-application-controller-course` - conteúdo do dia de controller completo
+  7. `simple-application-controller-live-lectures` - aula ao vivo do dia de controller completo
 </details>
 
 ## Rodando a aplicação inicial via Docker
