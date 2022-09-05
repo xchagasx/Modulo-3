@@ -7,7 +7,7 @@ Essa API é usada como exemplo didático para o bloco de Arquitetura de Software
 <details>
   <summary>Branchs no repositório</summary>
 
-  1.  `complex-application` - início do bloco
+  1. `complex-application` - início do bloco
   2. `simple-application-model-course` - conteúdo do dia de model completo
   3. `simple-application-model-live-lectures` - aula ao vivo do dia de model completo
   4. `simple-application-service-course` - conteúdo do dia de service completo
