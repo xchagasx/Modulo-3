@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  frontend: # serviços
+    build: frontend/
+    restart: always
+    ports: # mapeamento de porta
+      - 3000:3000  # primeiro paramêtro porta do computador, segundo do container
+    depends_on: # ordem de subida dos serviços
+      - backend
+    volumes:
+      - ./logs:/var/log/frontend
+    networks:
+      - rede-virtual-1
+  backend: # serviços
+    build: backend/
+    restart: always
+    ports: # mapeamento de porta
+      - 3001:3001 # primeiro paramêtro porta do computador, segundo do container
+    environment: # variavel de ambiente
+      - DB_HOST=database
+    depends_on: # ordem de subida dos serviços
+      - database
+    networks:
+      - rede-virtual-1
+      - rede-virtual-2
+  database: # serviços
+    image: betrybe/docker-compose-example-database:v1
+    restart: always
+    volumes:
+      - dados-do-banco:/data/db
+    networks:
+      - rede-virtual-2
+
+volumes:
+  - dados-do-banco:/data/db
+
+networks:
+  - rede-virtual-1:
+  - rede-virtual-2:
