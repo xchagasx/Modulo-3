@@ -1,0 +1,55 @@
+[
+  {
+    "_id": "83ae7131-6407-4833-9565-ea4ae9d13c57",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3001/movies",
+    "url": "http://localhost:3001/movies/2",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-11-03T13:39:01.308Z",
+    "modified": "2022-11-04T17:29:45.379Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"filme teste 2\",\n  \"directedBy\": \"teste 2\",\n  \"releaseYear\": 2007\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e0687dd8-e8dd-4300-8d10-adbe936b4d7c",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3001/movies",
+    "url": "http://localhost:3001/movies?filter=aaaa",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-04T14:55:12.754Z",
+    "modified": "2022-11-04T17:39:31.328Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "filter",
+        "value": "aaaa",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "0d9374b2-32cb-4d53-8163-6295696ec7b1",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3001/movies/2",
+    "url": "http://localhost:3001/movies/6",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-11-04T14:57:03.611Z",
+    "modified": "2022-11-04T17:27:15.096Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
