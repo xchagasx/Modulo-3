@@ -1,6 +1,6 @@
 const camelize = require('camelize');
 const snakeize = require('snakeize');
-const connection = require('./connection');
+const connection = require('./db/connection');
 
 const insert = async (travel) => {
   const columns = Object.keys(snakeize(travel))

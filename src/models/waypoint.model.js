@@ -1,5 +1,5 @@
 const snakeize = require('snakeize');
-const connection = require('./connection');
+const connection = require('./db/connection');
 
 const insert = async (waypoint) => {
   const columns = Object.keys(snakeize(waypoint))

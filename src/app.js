@@ -50,6 +50,11 @@ app.post('/passengers/:passengerId/request/travel', async (req, res) => {
   res.status(500).json({ message: 'Ocorreu um erro' });
 });
 
+app.get('/drivers', async (_req, res) => {
+  const result = await travelModel.findByTravelStatusId(WAITING_DRIVER);
+  res.status(200).json(result);
+});
+
 app.get('/drivers/open/travels', async (_req, res) => {
   const result = await travelModel.findByTravelStatusId(WAITING_DRIVER);
   res.status(200).json(result);

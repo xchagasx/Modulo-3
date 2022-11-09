@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 const { passengerModel } = require('../../../src/models');
 
-const connection = require('../../../src/models/connection');
+const connection = require('../../../src/models/db/connection');
 const { passengers, newPassenger } = require('./mocks/passenger.model.mock');
 
 describe('Testes de unidade do model de pessoas passageiras', function () {
