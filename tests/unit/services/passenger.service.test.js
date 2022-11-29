@@ -33,7 +33,7 @@ describe('Verificando service pessoa passageira', function () {
 
     it('retorna um erro caso a pessoa passageira não existe', async function () {
       sinon.stub(passengerModel, 'findById').resolves(undefined);
-     
+
       const result = await findById(1);
       
       expect(result.type).to.equal('PASSENGER_NOT_FOUND');
@@ -88,9 +88,9 @@ describe('Verificando service pessoa passageira', function () {
   describe('solicitação de viagem', function () {
     it('sem pontos de parada é realizada com sucesso', async function () {
       // arrange
-       sinon.stub(passengerModel, 'findById').resolves(true); // retorna verdadeiro sinalizando que o passageiro existe
-       sinon.stub(travelModel, 'insert').resolves(1); // retorna travel com ID 1
-       sinon.stub(travelModel, 'findById').resolves(travelResponse);
+        sinon.stub(passengerModel, 'findById').resolves(true); // retorna verdadeiro sinalizando que o passageiro existe
+        sinon.stub(travelModel, 'insert').resolves(1); // retorna travel com ID 1
+        sinon.stub(travelModel, 'findById').resolves(travelResponse);
       const WAITING_DRIVER = 1;
       const passenger = {
         id: 1,
@@ -117,7 +117,7 @@ describe('Verificando service pessoa passageira', function () {
 
     it('com pontos de parada é realizada com sucesso', async function () {
       // arrange
-      sinon.stub(passengerModel, 'findById').resolves(true); // retorna verdadeiro sinalizando que o passageiro existe
+       sinon.stub(passengerModel, 'findById').resolves(true); // retorna verdadeiro sinalizando que o passageiro existe
        sinon.stub(travelModel, 'insert').resolves(1); // retorna travel com ID 1
        sinon.stub(travelModel, 'findById').resolves(travelResponse);
        sinon.stub(waypointModel, 'insert').resolves(1); // retorna waypoint com ID 1
