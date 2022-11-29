@@ -12,7 +12,6 @@ const create = async (req, res) => {
 };
 
 const getAll = async (req, res) => {
-
   const findBy = req.query ? req.query.filter : null;
 
   const { type, message } = await movieService.getAll(findBy);
@@ -23,7 +22,7 @@ const getAll = async (req, res) => {
 };
 
 const getById = async (req, res) => {
-  const id = req.params.id;
+  const { id } = req.params;
   const { type, message } = await movieService.getById(Number(id));
 
   if (type) return res.status(errorMap.mapError(type)).json(message);
@@ -32,7 +31,7 @@ const getById = async (req, res) => {
 };
 
 const update = async (req, res) => {
-  const id = req.params.id;
+  const { id } = req.params;
   const { title, directedBy, releaseYear } = req.body;
 
   const { type, message } = await movieService.update(id, { title, directedBy, releaseYear });
@@ -43,7 +42,7 @@ const update = async (req, res) => {
 };
 
 const remove = async (req, res) => {
-  const id = req.params.id;
+  const { id } = req.params;
 
   const { type, message } = await movieService.remove(id);
 
@@ -52,11 +51,10 @@ const remove = async (req, res) => {
   res.status(200).json(message);
 };
 
-
 module.exports = {
   create,
   getAll,
   getById,
   update,
-  remove
+  remove,
 };

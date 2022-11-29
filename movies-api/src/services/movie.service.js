@@ -8,11 +8,13 @@ const getAll = async (findBy) => {
   return { type: null, message: movies };
 };
 
-const getById = async (movieIdParam) => {
+const getById = async (movieIdParam) => { 
   const error = validateId(movieIdParam);
   if (error.type) return error;
+
   const movie = await movieModel.findById(movieIdParam);
   if (movie) return { type: null, message: movie };
+  
   return { type: 'MOVIE_NOT_FOUND', message: 'Movie not found' };
 };
 
@@ -38,7 +40,7 @@ const update = async (movieIdParam, { title, directedBy, releaseYear }) => {
   return { type: null, message: updatedMovie };
 };
 
-const remove = async (movieIdParam) => {  
+const remove = async (movieIdParam) => {
   const error = validateId(movieIdParam);
   if (error.type) return error;
   const movieId = await movieModel.remove(movieIdParam);
@@ -51,5 +53,5 @@ module.exports = {
   getAll,
   getById,
   update,
-  remove
+  remove,
 };
